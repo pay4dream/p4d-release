@@ -1,10 +1,10 @@
 {
-  "version": "0.1.6",
-  "date": "2026-06-02",
+  "version": "0.2.0",
+  "date": "2026-06-03",
   "notes": [
-    "修复·Windows：消除打开后反复闪黑窗（dreamina 控制台子进程加 CREATE_NO_WINDOW）",
-    "修复·「登录即梦」「打开验证页」按钮现在能直接拉起浏览器（opener 之前无 URL 权限，已修；打不开仍可复制链接）",
-    "修复·视频界面去掉重复的「一键特效」按钮"
+    "P4D 0.2.0 正式版：画布工作台、导演计划、AI 助手记录、本地自动更新自检、反馈/遥测回收链路。",
+    "macOS 内发包：Pay4Dream.app / co.eason.pay4dream / 0.2.0。",
+    "Cloudflare ingest endpoint 已内置，D1 报表可读取。"
   ],
   "download_page_url": "https://km.mihoyo.com/doc/mhztk0relus6"
 }
