@@ -1,10 +1,10 @@
 {
-  "version": "0.1.5",
+  "version": "0.1.6",
   "date": "2026-06-02",
   "notes": [
-    "新增·登录即梦：doctor 未登录处 /「检查更新」旁可一键设备流登录，浏览器授权一次即可（即梦登录设备绑定，每台机器各自登录共享账号）",
-    "改进·干净机器 / Windows：内置 dreamina + 应用内登录，开箱即可生成视频（不再需手动装 dreamina / 拷凭证）",
-    "新增·同步收件箱：帮助菜单「同步收件箱 → todo」把 Gmail 未读拉进工作区 inbox-todo.md"
+    "修复·Windows：消除打开后反复闪黑窗（dreamina 控制台子进程加 CREATE_NO_WINDOW）",
+    "修复·「登录即梦」「打开验证页」按钮现在能直接拉起浏览器（opener 之前无 URL 权限，已修；打不开仍可复制链接）",
+    "修复·视频界面去掉重复的「一键特效」按钮"
   ],
   "download_page_url": "https://km.mihoyo.com/doc/mhztk0relus6"
 }
