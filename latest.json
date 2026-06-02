@@ -1,10 +1,10 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.5",
   "date": "2026-06-02",
   "notes": [
-    "新增·Windows 版：内置 dreamina + 共享即梦登录，开箱即用（无需自行安装 dreamina / 登录即梦）",
-    "新增·共享即梦登录：内发版内嵌团队即梦账号，干净机器无需各自 dreamina login 即可生成视频",
-    "修复·检查更新：菜单「帮助 → 检查更新…」+ 启动自动提示新版"
+    "新增·登录即梦：doctor 未登录处 /「检查更新」旁可一键设备流登录，浏览器授权一次即可（即梦登录设备绑定，每台机器各自登录共享账号）",
+    "改进·干净机器 / Windows：内置 dreamina + 应用内登录，开箱即可生成视频（不再需手动装 dreamina / 拷凭证）",
+    "新增·同步收件箱：帮助菜单「同步收件箱 → todo」把 Gmail 未读拉进工作区 inbox-todo.md"
   ],
   "download_page_url": "https://km.mihoyo.com/doc/mhztk0relus6"
 }
