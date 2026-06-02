@@ -1,9 +1,10 @@
 {
-  "version": "0.1.3",
-  "date": "2026-06-01",
+  "version": "0.1.4",
+  "date": "2026-06-02",
   "notes": [
-    "新增·检查更新：菜单「帮助 → 检查更新…」可查最新版本，启动时自动提示新版",
-    "改进·开箱即用：内置 dreamina（即梦 CLI），干净机器装好即可生成，无需自行安装 dreamina"
+    "新增·Windows 版：内置 dreamina + 共享即梦登录，开箱即用（无需自行安装 dreamina / 登录即梦）",
+    "新增·共享即梦登录：内发版内嵌团队即梦账号，干净机器无需各自 dreamina login 即可生成视频",
+    "修复·检查更新：菜单「帮助 → 检查更新…」+ 启动自动提示新版"
   ],
   "download_page_url": "https://km.mihoyo.com/doc/mhztk0relus6"
 }
