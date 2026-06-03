@@ -1,11 +1,8 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "date": "2026-06-03",
   "notes": [
-    "P4D 0.2.0 正式版完整包体：macOS 内发、macOS 外发、Windows 安装包。",
-    "0.2.0 升级沿用 Pay4Dream/co.eason.pay4dream 正式 app 身份，工作区、历史任务、素材和生成文件继续读取原工作区。",
-    "外发 mac 已通过零泄漏扫描；Windows 包由 GitHub Actions main@a8d0de0 构建。",
-    "Cloudflare ingest endpoint 已内置，D1 报表可读取。"
+    "submit 反馈 toast + 生成媒体打开动作修复 (task 011)"
   ],
   "download_page_url": "https://km.mihoyo.com/doc/mhztk0relus6"
 }
