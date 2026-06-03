@@ -1,8 +1,8 @@
 {
-  "version": "0.2.1",
+  "version": "0.2.2",
   "date": "2026-06-03",
   "notes": [
-    "submit 反馈 toast + 生成媒体打开动作修复 (task 011)"
+    "打开生成媒体修复（openPath，修 file:// 被拒）"
   ],
   "download_page_url": "https://km.mihoyo.com/doc/mhztk0relus6"
 }
