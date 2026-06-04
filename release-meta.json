@@ -1,9 +1,9 @@
 {
-  "version": "0.2.13",
+  "version": "0.2.14",
   "released_at": "2026-06-04",
   "downloads": {
-    "macos": "https://github.com/pay4dream/p4d-release/releases/download/v0.2.13/Pay4Dream-0.2.13-external-mac.dmg",
-    "windows": "https://github.com/pay4dream/p4d-release/releases/download/v0.2.13/Pay4Dream-0.2.13-external-win-x64-setup.exe"
+    "macos": "https://github.com/pay4dream/p4d-release/releases/download/v0.2.14/Pay4Dream-0.2.14-external-mac.dmg",
+    "windows": "https://github.com/pay4dream/p4d-release/releases/download/v0.2.14/Pay4Dream-0.2.14-external-win-x64-setup.exe"
   },
   "manual_url": "./manual.html",
   "feedback_url": "https://github.com/pay4dream/p4d-release/issues"
