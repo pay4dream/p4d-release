@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pay4Dream · 试用 Manual</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>试用 Manual</h1>
+      <p class="tagline">从安装到生成第一条成片</p>
+    </header>
+
+    <p class="meta-line"><a href="./index.html">← 回下载页</a></p>
+
+    <section>
+      <h2>1. 安装</h2>
+      <ul class="tight">
+        <li><strong>macOS</strong>：打开下载的 <code>.dmg</code>，把 Pay4Dream 拖进「应用程序」。
+          首次打开<strong>右键图标 → 打开</strong>，弹窗里再点「打开」。若提示「已损坏」，
+          终端运行 <code>xattr -dr com.apple.quarantine "/Applications/Pay4Dream.app"</code> 后重试。</li>
+        <li><strong>Windows</strong>：双击 <code>.exe</code> 走安装向导。SmartScreen 弹窗点
+          「更多信息」→「仍要运行」。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. 首次启动：输入邀请码</h2>
+      <p>第一次打开会要求输入<strong>邀请码</strong>。把拿到的邀请码粘进去激活即可。
+        激活信息保存在本机，下次启动不再要求。</p>
+    </section>
+
+    <section>
+      <h2>3. 填入你自己的 API Key</h2>
+      <p>本版需要你自带模型 Key。进入<strong>设置 → 模型 / API Key</strong>，填入你的
+        <strong>OpenAI</strong> 或 <strong>Anthropic</strong> Key 并保存。</p>
+      <ul class="tight">
+        <li>Key 只保存在本机，请求<strong>直接发往对应模型厂商</strong>，不经第三方中转。</li>
+        <li>没有 Key？到 OpenAI 或 Anthropic 官网申请后再回来填。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. 生成第一条成片</h2>
+      <ul class="tight">
+        <li>新建一个项目，用自然语言描述你想要的内容（主题、风格、时长等）。</li>
+        <li>按提示一步步生成脚本 / 分镜 / 画面 / 成片，每步都可修改后再继续。</li>
+        <li>生成结果可在项目里预览和导出。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. 常见问题</h2>
+      <ul class="tight">
+        <li><strong>提示 Key 无效 / 额度不足</strong>：到模型厂商后台确认 Key 状态和余额。</li>
+        <li><strong>打不开 / 被系统拦</strong>：见第 1 步的右键打开 / SmartScreen 放行。</li>
+        <li><strong>生成很慢或失败</strong>：检查网络能否访问对应模型厂商，稍后重试。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. 反馈</h2>
+      <p>问题和建议请到 <a href="./index.html#feedback">下载页的反馈入口</a>（GitHub Issues）提交，
+        附系统版本、复现步骤和截图。</p>
+    </section>
+
+    <footer>
+      <span class="pill">面向外部试用用户 · 需邀请码 + 自带 API Key</span>
+    </footer>
+  </div>
+</body>
+</html>

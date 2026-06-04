@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pay4Dream · 下载与试用</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>Pay4Dream</h1>
+      <p class="tagline">把想法变成成片 —— 桌面创作助手</p>
+    </header>
+
+    <!-- 版本号 / 发布时间，运行时由 release-meta.json 填充 -->
+    <p class="meta-line" data-section="version">
+      版本 <strong id="meta-version">…</strong> · 发布于 <span id="meta-date">…</span>
+    </p>
+
+    <!-- 下载：macOS / Windows 两个按钮。URL 为占位/空时显示禁用「尚未发布」态 -->
+    <section data-section="download">
+      <h2>下载</h2>
+      <div class="downloads">
+        <a id="dl-macos" class="dl-btn" href="#" aria-disabled="true">
+          <span class="platform">macOS</span>
+          <span class="hint">Apple Silicon / Intel · .dmg</span>
+        </a>
+        <a id="dl-windows" class="dl-btn" href="#" aria-disabled="true">
+          <span class="platform">Windows</span>
+          <span class="hint">Windows 10/11 64 位 · 安装向导 .exe</span>
+        </a>
+      </div>
+      <p class="callout" id="dl-status">正在读取最新版本信息…</p>
+    </section>
+
+    <!-- 安全提示：未签名 / Gatekeeper / SmartScreen -->
+    <section data-section="safety">
+      <h2>安装与首次打开</h2>
+      <p>当前安装包<strong>未做系统级签名</strong>，首次打开需手动放行：</p>
+      <ul class="tight">
+        <li><strong>macOS</strong>：把 Pay4Dream 拖进「应用程序」后，<strong>右键点图标 → 打开</strong>，
+          在弹窗里再点一次「打开」。若提示「已损坏 / 无法验证」，在「终端」运行
+          <code>xattr -dr com.apple.quarantine "/Applications/Pay4Dream.app"</code> 后重试。</li>
+        <li><strong>Windows</strong>：运行 .exe 时若出现 SmartScreen 蓝色弹窗，点
+          「更多信息」→「<strong>仍要运行</strong>」。</li>
+      </ul>
+      <p class="callout warn">只从本页下载安装包。其它来源的同名文件我们无法保证安全。</p>
+    </section>
+
+    <!-- 试用限制：邀请码 + 自带 key -->
+    <section data-section="trial-limits">
+      <h2>试用须知</h2>
+      <ul class="tight">
+        <li>首次启动需要<strong>邀请码</strong>激活。</li>
+        <li>需要你<strong>自带 OpenAI / Anthropic API Key</strong>（在应用内设置里填）。本版不提供任何托管的模型额度或公共通道。</li>
+        <li>你的 Key 仅保存在本机、直接发往对应模型厂商，我们不经手、不上传。</li>
+      </ul>
+    </section>
+
+    <!-- 试用 Manual 链接 -->
+    <section data-section="manual">
+      <h2>试用手册</h2>
+      <p>第一次用？看 <a id="manual-link" href="./manual.html">试用 Manual</a> —— 从安装、激活、填 Key 到生成第一条成片。</p>
+    </section>
+
+    <!-- 反馈入口：GitHub Issues -->
+    <section data-section="feedback">
+      <h2>反馈与报告问题</h2>
+      <p>遇到 bug 或有建议，请到 <a id="feedback-link" href="#" rel="noopener">GitHub Issues</a> 提交。
+        附上系统版本、复现步骤和截图能让我们更快定位。</p>
+    </section>
+
+    <footer>
+      <span class="pill">独立公开页面 · 与任何内部分发渠道无关</span>
+    </footer>
+  </div>
+
+  <script>
+    // 运行时从 release-meta.json 填充版本 / 时间 / 下载链接。
+    // 占位值（REPLACE_WITH_*）或空 → 对应下载按钮保持禁用「尚未发布」态。
+    (function () {
+      function isPlaceholder(v) {
+        return !v || typeof v !== "string" || v.indexOf("REPLACE_WITH_") === 0;
+      }
+      function setBtn(id, url, label) {
+        var el = document.getElementById(id);
+        if (!el) return false;
+        if (isPlaceholder(url)) {
+          el.setAttribute("aria-disabled", "true");
+          el.setAttribute("href", "#");
+          var hint = el.querySelector(".hint");
+          if (hint) hint.textContent = label + " · 尚未发布";
+          return false;
+        }
+        el.removeAttribute("aria-disabled");
+        el.setAttribute("href", url);
+        return true;
+      }
+      fetch("./release-meta.json", { cache: "no-store" })
+        .then(function (r) { return r.json(); })
+        .then(function (m) {
+          var vEl = document.getElementById("meta-version");
+          var dEl = document.getElementById("meta-date");
+          if (vEl) vEl.textContent = isPlaceholder(m.version) ? "尚未发布" : m.version;
+          if (dEl) dEl.textContent = isPlaceholder(m.released_at) ? "—" : m.released_at;
+
+          var dl = m.downloads || {};
+          var hasMac = setBtn("dl-macos", dl.macos, "Apple Silicon / Intel · .dmg");
+          var hasWin = setBtn("dl-windows", dl.windows, "Windows 10/11 64 位 · 安装向导 .exe");
+
+          var status = document.getElementById("dl-status");
+          if (status) {
+            status.textContent = (hasMac || hasWin)
+              ? "选择对应你的系统下载。首次打开请看下方「安装与首次打开」。"
+              : "暂未发布可下载的安装包，请稍后再来。";
+          }
+
+          var manual = document.getElementById("manual-link");
+          if (manual && !isPlaceholder(m.manual_url)) manual.setAttribute("href", m.manual_url);
+          var fb = document.getElementById("feedback-link");
+          if (fb && !isPlaceholder(m.feedback_url)) fb.setAttribute("href", m.feedback_url);
+        })
+        .catch(function () {
+          var status = document.getElementById("dl-status");
+          if (status) status.textContent = "版本信息读取失败，请刷新页面重试。";
+        });
+    })();
+  </script>
+</body>
+</html>
