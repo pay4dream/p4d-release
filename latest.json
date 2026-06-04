@@ -1,9 +1,9 @@
 {
-  "version": "0.2.14",
+  "version": "0.2.15",
   "date": "2026-06-04",
   "notes": [
-    "0.2.14 修复对话生成入口、Dreamina 成功率策略、提交 prompt 单一入口与浅色节点画布显示。",
-    "修复 KM 双平台附件发布链路，继续保持 macOS + Windows 同步下载。"
+    "0.2.14(2) 外发热修：外发版 LLM 不再只支持 Claude，新增 GPT / Gemini / Grok / OpenRouter / DeepSeek / Kimi / Qwen / GLM / MiniMax / 自定义 OpenAI-compatible。",
+    "设置页支持 Providers 凭证配置 + AI 引擎按任务选择模型；公开下载页和 Manual 已同步多 LLM 配置说明。"
   ],
-  "download_page_url": "https://km.mihoyo.com/doc/mhztk0relus6"
+  "download_page_url": "https://pay4dream.github.io/p4d-release/"
 }
