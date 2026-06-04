@@ -6,5 +6,5 @@
     "windows": "https://github.com/pay4dream/p4d-release/releases/download/v0.2.14/Pay4Dream-0.2.14-external-win-x64-setup.exe"
   },
   "manual_url": "./manual.html",
-  "feedback_url": "https://github.com/pay4dream/p4d-release/issues"
+  "feedback_url": "mailto:pay4dream.app@gmail.com"
 }

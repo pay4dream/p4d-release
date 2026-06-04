@@ -65,12 +65,13 @@
       <p>第一次用？看 <a id="manual-link" href="./manual.html">试用 Manual</a> —— 从安装、激活、填 Key 到生成第一条成片。</p>
     </section>
 
-    <!-- 反馈入口：GitHub Issues -->
+    <!-- 反馈入口：App 内 AI 助手 / 邮件 -->
     <section data-section="feedback">
       <h2>反馈与报告问题</h2>
-      <p>遇到 bug 或有建议，请到 <a id="feedback-link" href="#" rel="noopener">GitHub Issues</a> 提交。
-        附上系统版本、复现步骤和截图能让我们更快定位。也可以邮件联系
+      <p>遇到 bug 或有建议，优先在 App 内打开 <strong>AI 助手</strong> 描述问题；
+        如果无法打开 App，请邮件联系
         <a href="mailto:pay4dream.app@gmail.com">pay4dream.app@gmail.com</a>。</p>
+      <p class="callout">反馈时请附上系统版本、App 版本、复现步骤和截图，方便定位。</p>
     </section>
 
     <footer>
@@ -120,8 +121,6 @@
 
           var manual = document.getElementById("manual-link");
           if (manual && !isPlaceholder(m.manual_url)) manual.setAttribute("href", m.manual_url);
-          var fb = document.getElementById("feedback-link");
-          if (fb && !isPlaceholder(m.feedback_url)) fb.setAttribute("href", m.feedback_url);
         })
         .catch(function () {
           var status = document.getElementById("dl-status");
