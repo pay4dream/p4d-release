@@ -1,9 +1,11 @@
 {
-  "version": "0.2.15",
-  "date": "2026-06-04",
+  "version": "0.3.0",
+  "date": "2026-06-07",
   "notes": [
-    "0.2.14(2) 外发热修：外发版 LLM 不再只支持 Claude，新增 GPT / Gemini / Grok / OpenRouter / DeepSeek / Kimi / Qwen / GLM / MiniMax / 自定义 OpenAI-compatible。",
-    "设置页支持 Providers 凭证配置 + AI 引擎按任务选择模型；公开下载页和 Manual 已同步多 LLM 配置说明。"
+    "0.3.0 资产生成重做：角色 / 场景 / 物品 / 音频四类资产，默认进入 AI 生成，补充角色服装、妆容、三视图、场景动作等定制选项。",
+    "图片当前任务失败可关闭、可编辑重试；生成成功后支持继续抽卡。",
+    "修复反馈后台两条 gpt-image-2 / azure gpt-image-2 moderation_blocked 错误：安全拦截不再暴露原始 Azure 报错，改为中文提示并要求修改描述词。",
+    "完善资产入库、项目继承和右键/任务重试链路；质量闸门和 UI smoke 已更新。"
   ],
-  "download_page_url": "https://pay4dream.github.io/p4d-release/"
+  "download_page_url": "https://km.mihoyo.com/doc/mhztk0relus6"
 }
