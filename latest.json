@@ -2,8 +2,8 @@
   "version": "0.3.2",
   "date": "2026-06-27",
   "notes": [
-    "0.3.2 外发 macOS 包已发布。",
-    "Windows 0.3.2 外发包当前未产出，公开下载页会保持 Windows 入口禁用，避免误下旧包。",
+    "0.3.2 外发 macOS / Windows 双平台包已发布。",
+    "Windows 下载入口已恢复指向 0.3.2 外发安装包，避免误下旧包。",
     "外发版继续需要邀请码和用户自备模型 Key，不内置公司内网 token。"
   ],
   "download_page_url": "https://pay4dream.github.io/p4d-release/index.html"
