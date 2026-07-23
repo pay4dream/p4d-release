@@ -35,19 +35,20 @@
     </section>
 
     <section data-section="highlights">
-      <h2>0.3.2 本版亮点</h2>
+      <h2>1.0.0 本版亮点</h2>
       <ul class="tight">
-        <li><strong>3D 分镜工作区</strong>：按镜头设置景别、机位、焦距、角色动作、场景 / 材质和关键帧运动路径，先把镜头调度说清楚再生成。</li>
-        <li><strong>绑定 3D 分镜导演链路</strong>：提交视频时可显式绑定 / 解绑已保存的 3D 分镜；绑定时会把镜头、动作和运动路径注入最终 prompt。</li>
-        <li><strong>一键改图</strong>：选择源图、最多 4 张参考图和一句改图需求，直接生成新的图片资产。</li>
-        <li><strong>稳定性修复</strong>：修复 3D 木偶拖拽肢体脱节，以及 macOS 启动后无窗口 / 重开不聚焦的问题。</li>
+        <li><strong>统一 SceneBoard</strong>：角色、场景道具、姿态、摄影机、焦距和时间线预览集中在同一套 3D Storyboard 流程。</li>
+        <li><strong>参考驱动视频</strong>：本地图片 / 视频、Cadrage 和 iOS <code>.p4dcapture</code> 可以作为静态或动态参考；导入和预览不会提交生成。</li>
+        <li><strong>生成 / 流程双模式</strong>：常用逐镜头操作使用简洁的「生成」，节点画布、上下游关系和执行计划保留在「流程」。</li>
+        <li><strong>素材操作更直接</strong>：图片镜头、任务、资产和镜头出图可折叠恢复，支持行操作，右键菜单关闭更可靠。</li>
+        <li><strong>外部集成更清楚</strong>：对话编辑仍是主要入口；LibTV 作为可选外部生成集成，如实显示安装、登录和任务状态。</li>
       </ul>
     </section>
 
     <!-- 安全提示：未签名 / Gatekeeper / SmartScreen -->
     <section data-section="safety">
       <h2>安装与首次打开</h2>
-      <p>当前安装包<strong>未做系统级签名</strong>，首次打开需手动放行：</p>
+      <p>macOS 包使用 <strong>ad-hoc 签名且未经过 Apple notarization</strong>；Windows 安装包<strong>未签名</strong>。首次打开可能需要手动放行：</p>
       <ul class="tight">
         <li><strong>macOS</strong>：把 Pay4Dream 拖进「应用程序」后，<strong>右键点图标 → 打开</strong>，
           在弹窗里再点一次「打开」。若提示「已损坏 / 无法验证」，在「终端」运行
@@ -55,6 +56,7 @@
         <li><strong>Windows</strong>：运行 .exe 时若出现 SmartScreen 蓝色弹窗，点
           「更多信息」→「<strong>仍要运行</strong>」。</li>
       </ul>
+      <p>macOS 包不是 Developer ID 签名；Windows 包没有代码签名证书。</p>
       <p class="callout warn">只从本页下载安装包。其它来源的同名文件我们无法保证安全。</p>
     </section>
 
