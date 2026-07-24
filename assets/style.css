@@ -104,6 +104,22 @@ section h2 {
 }
 .callout.warn { border-left-color: var(--danger); }
 
+.preview-figure {
+  margin: 14px 0 18px;
+}
+.preview-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.preview-figure figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 ul.tight { margin: 8px 0; padding-left: 20px; }
 ul.tight li { margin: 4px 0; }
 

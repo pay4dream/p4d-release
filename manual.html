@@ -16,6 +16,11 @@
     <p class="meta-line"><a href="./index.html">← 回下载页</a></p>
 
     <section>
+      <h2>发布状态</h2>
+      <p class="callout warn">1.0.0 修正版发布暂停。首批正式包未默认启用完整的 3D 分镜链路，已撤下下载；下面的 SceneBoard 路径仅用于了解修正版目标，不代表当前正式包可用。</p>
+    </section>
+
+    <section>
       <h2>1. 安装</h2>
       <ul class="tight">
         <li><strong>macOS</strong>：打开下载的 <code>.dmg</code>，把 Pay4Dream 拖进「应用程序」。
@@ -51,7 +56,7 @@
         <li>新建项目；已有文案、KM、链接或文件时，先用「对话生成」整理项目、序列和镜头。</li>
         <li>有现成图片、视频或音频时先导入资产库，再绑定到目标镜头。</li>
         <li>常用逐镜头操作留在「生成」模式；需要节点、上下游关系和执行计划时切到「流程」。</li>
-        <li>要控制角色、场景、姿态、摄影机或动态参考时，打开当前镜头的「3D 分镜」编辑 SceneBoard。</li>
+        <li>修正版上线后，要控制角色、场景、姿态、摄影机或动态参考时，打开当前镜头的「3D 分镜」编辑 SceneBoard。</li>
         <li>提交前检查 prompt、参考素材和参数；只有确认提交后才会运行生成。</li>
         <li>生成结果可在项目里预览、选片、重试并进入自动剪辑。</li>
       </ul>
@@ -60,7 +65,8 @@
     <section>
       <h2>5. 参考素材与外部生成</h2>
       <ul class="tight">
-        <li>SceneBoard 可导入本地图片 / 视频、Cadrage 和 iOS <code>.p4dcapture</code>；导入、编辑和预览不会自动生成。</li>
+        <li>修正版目标：SceneBoard 可导入本地图片 / 视频、Cadrage 和移动端采集素材；导入、编辑和预览不会自动生成。</li>
+        <li>镜头运动轨迹联动计划 Android 优先；iOS 上线时间未定，两者均未包含在当前 1.0.0 中。</li>
         <li>iOS 文件通过系统 Files / File Provider 已同步到本机的目录读取，P4D 不提供自有 iCloud 账号绑定。</li>
         <li>LibTV 是可选第三方集成，需要自行安装官方 CLI 并显式登录；只有「确认上传并生成」会运行外部任务。</li>
       </ul>

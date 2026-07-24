@@ -3,24 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pay4Dream · 下载与试用</title>
+  <title>Pay4Dream · 1.0.0 发布状态</title>
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
   <div class="wrap">
     <header class="hero">
       <h1>Pay4Dream</h1>
-      <p class="tagline">把想法变成成片 —— 桌面创作助手</p>
+      <p class="tagline">3D 分镜是 1.0.0 的 T0 产品方向</p>
     </header>
 
     <!-- 版本号 / 发布时间，运行时由 release-meta.json 填充 -->
     <p class="meta-line" data-section="version">
-      版本 <strong id="meta-version">…</strong> · 发布于 <span id="meta-date">…</span>
+      版本 <strong id="meta-version">…</strong> · <span id="meta-date">修正版发布暂停</span>
     </p>
 
     <!-- 下载：macOS / Windows 两个按钮。URL 为占位/空时显示禁用「尚未发布」态 -->
     <section data-section="download">
-      <h2>下载</h2>
+      <h2>1.0.0 修正版发布暂停</h2>
+      <p>首批正式包未默认启用完整的 3D Storyboard / SceneBoard 链路，现已撤下。请不要继续分发或安装此前下载的 1.0.0 文件；修正版通过 macOS / Windows 验收后会在此恢复下载。</p>
       <div class="downloads">
         <a id="dl-macos" class="dl-btn" href="#" aria-disabled="true">
           <span class="platform">macOS</span>
@@ -31,33 +32,28 @@
           <span class="hint">Windows 10/11 64 位 · 安装向导 .exe</span>
         </a>
       </div>
-      <p class="callout" id="dl-status">正在读取最新版本信息…</p>
+      <p class="callout warn" id="dl-status">当前没有可下载的 1.0.0 正式包。</p>
     </section>
 
     <section data-section="highlights">
-      <h2>1.0.0 本版亮点</h2>
+      <h2>3D 分镜：修正版预览</h2>
+      <figure class="preview-figure">
+        <img src="./assets/sceneboard-preview.png" alt="Pay4Dream 3D 分镜开发预览：角色、道具、摄影机、运动轨迹与时间线位于同一工作区" />
+        <figcaption>开发预览画面，来自本地 Beta；不代表当前正式包已经开放该功能。</figcaption>
+      </figure>
       <ul class="tight">
-        <li><strong>统一 SceneBoard</strong>：角色、场景道具、姿态、摄影机、焦距和时间线预览集中在同一套 3D Storyboard 流程。</li>
-        <li><strong>参考驱动视频</strong>：本地图片 / 视频、Cadrage 和 iOS <code>.p4dcapture</code> 可以作为静态或动态参考；导入和预览不会提交生成。</li>
-        <li><strong>生成 / 流程双模式</strong>：常用逐镜头操作使用简洁的「生成」，节点画布、上下游关系和执行计划保留在「流程」。</li>
-        <li><strong>素材操作更直接</strong>：图片镜头、任务、资产和镜头出图可折叠恢复，支持行操作，右键菜单关闭更可靠。</li>
-        <li><strong>外部集成更清楚</strong>：对话编辑仍是主要入口；LibTV 作为可选外部生成集成，如实显示安装、登录和任务状态。</li>
+        <li><strong>统一调度</strong>：角色、场景道具、姿态、摄影机、焦距、关键帧和时间线预演集中在一个 SceneBoard。</li>
+        <li><strong>先设计，再生成</strong>：镜头运动轨迹和参考策略可以在消耗生成额度前检查，再进入视频提交链路。</li>
+        <li><strong>多来源参考</strong>：修正版目标包含本地媒体、Cadrage 和移动端采集素材的统一接入。</li>
+        <li><strong>移动端路线图</strong>：镜头运动轨迹联动计划 Android 优先；iOS 上线时间未定。两者均未包含在当前 1.0.0 中。</li>
       </ul>
     </section>
 
     <!-- 安全提示：未签名 / Gatekeeper / SmartScreen -->
     <section data-section="safety">
-      <h2>安装与首次打开</h2>
-      <p>macOS 包使用 <strong>ad-hoc 签名且未经过 Apple notarization</strong>；Windows 安装包<strong>未签名</strong>。首次打开可能需要手动放行：</p>
-      <ul class="tight">
-        <li><strong>macOS</strong>：把 Pay4Dream 拖进「应用程序」后，<strong>右键点图标 → 打开</strong>，
-          在弹窗里再点一次「打开」。若提示「已损坏 / 无法验证」，在「终端」运行
-          <code>xattr -dr com.apple.quarantine "/Applications/Pay4Dream.app"</code> 后重试。</li>
-        <li><strong>Windows</strong>：运行 .exe 时若出现 SmartScreen 蓝色弹窗，点
-          「更多信息」→「<strong>仍要运行</strong>」。</li>
-      </ul>
-      <p>macOS 包不是 Developer ID 签名；Windows 包没有代码签名证书。</p>
-      <p class="callout warn">只从本页下载安装包。其它来源的同名文件我们无法保证安全。</p>
+      <h2>恢复下载的条件</h2>
+      <p>修正版必须在 Internal / Public、macOS / Windows 四个正式渠道中都能直接看到并完成 3D 分镜骨干路径，且下载链接、包体身份和校验值全部读回验证通过。</p>
+      <p class="callout warn">恢复后仍会如实标注签名状态：macOS 为 ad-hoc 签名且未 notarize；Windows 未签名。</p>
     </section>
 
     <!-- 试用限制：邀请码 + 自带 key -->
@@ -128,7 +124,9 @@
           if (status) {
             status.textContent = (hasMac || hasWin)
               ? "选择对应你的系统下载。首次打开请看下方「安装与首次打开」。"
-              : "暂未发布可下载的安装包，请稍后再来。";
+              : (m.status === "hold"
+                ? "1.0.0 修正版发布暂停，当前没有可下载的正式包。"
+                : "暂未发布可下载的安装包，请稍后再来。");
           }
 
           var manual = document.getElementById("manual-link");
