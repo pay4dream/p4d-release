@@ -15,9 +15,16 @@
 
     <p class="meta-line"><a href="./index.html">← 回下载页</a></p>
 
+    <figure class="preview-figure">
+      <video controls preload="metadata" poster="./assets/sceneboard-preview.png">
+        <source src="./assets/p4d-mobile-capability-demo-zh-en-v3.mp4" type="video/mp4" />
+      </video>
+      <figcaption>Android 镜头捕捉器技术预览：中英字幕演示陀螺仪、双摇杆运镜、3D 场景编辑和关键帧动画。画面来自模拟器，真实设备硬件验收仍在进行。</figcaption>
+    </figure>
+
     <section>
       <h2>发布状态</h2>
-      <p class="callout warn">1.0.0 修正版发布暂停。首批正式包未默认启用完整的 3D 分镜链路，已撤下下载；下面的 SceneBoard 路径仅用于了解修正版目标，不代表当前正式包可用。</p>
+      <p class="callout">1.0.1 已恢复 macOS / Windows 双平台下载。Public 版无需邀请码或激活码，安装后配置你自己的模型 API Key 即可使用。</p>
     </section>
 
     <section>
@@ -27,16 +34,13 @@
           首次打开<strong>右键图标 → 打开</strong>，弹窗里再点「打开」。若提示「已损坏」，
           终端运行 <code>xattr -dr com.apple.quarantine "/Applications/Pay4Dream.app"</code> 后重试。</li>
         <li><strong>Windows</strong>：双击 <code>.exe</code> 走安装向导。SmartScreen 弹窗点
-          「更多信息」→「仍要运行」。</li>
+          「更多信息」→「仍要运行」。安装包未签名；本版尚未完成真实 Windows 机器上的安装启动验收。</li>
       </ul>
     </section>
 
     <section>
-      <h2>2. 首次启动：输入邀请码</h2>
-      <p>第一次打开会要求输入<strong>邀请码</strong>。把拿到的邀请码粘进去激活即可。
-        如果还没有邀请码，请邮件联系
-        <a href="mailto:pay4dream.app@gmail.com">pay4dream.app@gmail.com</a> 获取。
-        激活信息保存在本机，下次启动不再要求。</p>
+      <h2>2. 首次启动</h2>
+      <p>Public 1.0.1 无需邀请码或激活码。打开应用后直接建立项目，或先进入设置配置模型服务。</p>
     </section>
 
     <section>
@@ -56,7 +60,8 @@
         <li>新建项目；已有文案、KM、链接或文件时，先用「对话生成」整理项目、序列和镜头。</li>
         <li>有现成图片、视频或音频时先导入资产库，再绑定到目标镜头。</li>
         <li>常用逐镜头操作留在「生成」模式；需要节点、上下游关系和执行计划时切到「流程」。</li>
-        <li>修正版上线后，要控制角色、场景、姿态、摄影机或动态参考时，打开当前镜头的「3D 分镜」编辑 SceneBoard。</li>
+        <li>要控制角色、场景、姿态、摄影机或动态参考时，打开当前镜头的「3D 分镜」编辑 SceneBoard。</li>
+        <li>3D 画布中左键拖动平移视角，<code>Shift + 左键</code> 环绕观察，滚轮缩放；右键打开场景菜单。选中模型或组合道具后可用移动、旋转、缩放控件编辑，操作支持撤销、重做和保存恢复。</li>
         <li>提交前检查 prompt、参考素材和参数；只有确认提交后才会运行生成。</li>
         <li>生成结果可在项目里预览、选片、重试并进入自动剪辑。</li>
       </ul>
@@ -65,8 +70,8 @@
     <section>
       <h2>5. 参考素材与外部生成</h2>
       <ul class="tight">
-        <li>修正版目标：SceneBoard 可导入本地图片 / 视频、Cadrage 和移动端采集素材；导入、编辑和预览不会自动生成。</li>
-        <li>镜头运动轨迹联动计划 Android 优先；iOS 上线时间未定，两者均未包含在当前 1.0.0 中。</li>
+        <li>SceneBoard 可导入本地图片 / 视频、Cadrage 和移动端采集素材；导入、编辑和预览不会自动生成。</li>
+        <li>Android 镜头捕捉器技术预览可采集镜头运动并回传 <code>.p4dcapture</code>；尚未完成真实设备硬件验收。iOS 上线时间未定。</li>
         <li>iOS 文件通过系统 Files / File Provider 已同步到本机的目录读取，P4D 不提供自有 iCloud 账号绑定。</li>
         <li>LibTV 是可选第三方集成，需要自行安装官方 CLI 并显式登录；只有「确认上传并生成」会运行外部任务。</li>
       </ul>
@@ -89,7 +94,7 @@
     </section>
 
     <footer>
-      <span class="pill">面向外部试用用户 · 需邀请码 + 自带 API Key</span>
+      <span class="pill">面向外部试用用户 · 无需邀请码 · 自带 API Key</span>
     </footer>
   </div>
 </body>

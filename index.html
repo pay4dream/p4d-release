@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pay4Dream · 1.0.0 发布状态</title>
+  <title>Pay4Dream · 1.0.1 下载</title>
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
   <div class="wrap">
     <header class="hero">
       <h1>Pay4Dream</h1>
-      <p class="tagline">3D 分镜是 1.0.0 的 T0 产品方向</p>
+      <p class="tagline">先在 3D 分镜里把镜头走一遍，再进入生成</p>
     </header>
 
     <!-- 版本号 / 发布时间，运行时由 release-meta.json 填充 -->
     <p class="meta-line" data-section="version">
-      版本 <strong id="meta-version">…</strong> · <span id="meta-date">修正版发布暂停</span>
+      版本 <strong id="meta-version">…</strong> · <span id="meta-date">2026-07-27</span>
     </p>
 
     <!-- 下载：macOS / Windows 两个按钮。URL 为占位/空时显示禁用「尚未发布」态 -->
     <section data-section="download">
-      <h2>1.0.0 修正版发布暂停</h2>
-      <p>首批正式包未默认启用完整的 3D Storyboard / SceneBoard 链路，现已撤下。请不要继续分发或安装此前下载的 1.0.0 文件；修正版通过 macOS / Windows 验收后会在此恢复下载。</p>
+      <h2>下载 Pay4Dream 1.0.1</h2>
+      <p>Public 版支持 macOS 与 Windows，无需邀请码或激活码。安装后配置你自己的模型 API Key，即可开始建立项目、管理素材和设计镜头。</p>
       <div class="downloads">
         <a id="dl-macos" class="dl-btn" href="#" aria-disabled="true">
           <span class="platform">macOS</span>
@@ -32,36 +32,43 @@
           <span class="hint">Windows 10/11 64 位 · 安装向导 .exe</span>
         </a>
       </div>
-      <p class="callout warn" id="dl-status">当前没有可下载的 1.0.0 正式包。</p>
+      <p class="callout" id="dl-status">选择对应你的系统下载。</p>
     </section>
 
     <section data-section="highlights">
-      <h2>3D 分镜：修正版预览</h2>
+      <h2>1.0.1 重点更新：3D 分镜</h2>
       <figure class="preview-figure">
-        <img src="./assets/sceneboard-preview.png" alt="Pay4Dream 3D 分镜开发预览：角色、道具、摄影机、运动轨迹与时间线位于同一工作区" />
-        <figcaption>开发预览画面，来自本地 Beta；不代表当前正式包已经开放该功能。</figcaption>
+        <video controls preload="metadata" poster="./assets/sceneboard-preview.png">
+          <source src="./assets/p4d-mobile-capability-demo-zh-en-v3.mp4" type="video/mp4" />
+        </video>
+        <figcaption>Android 镜头捕捉器技术预览：中英字幕演示陀螺仪、双摇杆运镜、3D 场景编辑和关键帧动画。画面来自模拟器，真实设备硬件验收仍在进行。</figcaption>
+      </figure>
+      <figure class="preview-figure">
+        <img src="./assets/sceneboard-preview.png" alt="Pay4Dream 3D 分镜：角色、道具、摄影机、运动轨迹与时间线位于同一工作区" />
+        <figcaption>在统一 SceneBoard 中检查构图、机位、动作和运镜，再决定参考与生成路线。</figcaption>
       </figure>
       <ul class="tight">
         <li><strong>统一调度</strong>：角色、场景道具、姿态、摄影机、焦距、关键帧和时间线预演集中在一个 SceneBoard。</li>
+        <li><strong>旋转修复</strong>：单个模型与组合道具都能通过旋转控件更新可见姿态；组合道具围绕共同中心整体变换，并支持撤销、重做和保存恢复。</li>
+        <li><strong>一致的鼠标操作</strong>：左键拖动平移视角，<code>Shift + 左键</code> 环绕观察，滚轮缩放；右键只打开场景菜单。</li>
         <li><strong>先设计，再生成</strong>：镜头运动轨迹和参考策略可以在消耗生成额度前检查，再进入视频提交链路。</li>
-        <li><strong>多来源参考</strong>：修正版目标包含本地媒体、Cadrage 和移动端采集素材的统一接入。</li>
-        <li><strong>移动端路线图</strong>：镜头运动轨迹联动计划 Android 优先；iOS 上线时间未定。两者均未包含在当前 1.0.0 中。</li>
+        <li><strong>多来源参考</strong>：本地图片 / 视频、Cadrage 与移动端采集素材可以进入统一参考链路。</li>
+        <li><strong>移动端协作</strong>：Android 镜头捕捉器技术预览可采集陀螺仪 / 摇杆运镜、编辑 3D 场景与关键帧，并通过 <code>.p4dcapture</code> 返回桌面；iOS 上线时间未定。</li>
       </ul>
     </section>
 
     <!-- 安全提示：未签名 / Gatekeeper / SmartScreen -->
     <section data-section="safety">
-      <h2>恢复下载的条件</h2>
-      <p>修正版必须在 Internal / Public、macOS / Windows 四个正式渠道中都能直接看到并完成 3D 分镜骨干路径，且下载链接、包体身份和校验值全部读回验证通过。</p>
-      <p class="callout warn">恢复后仍会如实标注签名状态：macOS 为 ad-hoc 签名且未 notarize；Windows 未签名。</p>
+      <h2>安装与安全提示</h2>
+      <p>macOS 包为 ad-hoc 签名且未经过 Apple notarization；首次打开请右键 App 选择「打开」。Windows 安装包未签名，SmartScreen 出现时请核对文件名与发布页后再选择「仍要运行」。Windows 已通过原生构建与安装包检查，但尚未完成真实 Windows 机器上的安装启动验收。</p>
+      <p class="callout warn">只从本页或 GitHub Release 下载 Public 包。Internal 与 Beta 包不对外分发。</p>
     </section>
 
-    <!-- 试用限制：邀请码 + 自带 key -->
+    <!-- 试用限制：无邀请码 + 自带 key -->
     <section data-section="trial-limits">
       <h2>试用须知</h2>
       <ul class="tight">
-        <li>首次启动需要<strong>邀请码</strong>激活。没有邀请码请邮件联系
-          <a href="mailto:pay4dream.app@gmail.com">pay4dream.app@gmail.com</a> 获取。</li>
+        <li>Public 1.0.1 <strong>无需邀请码或激活码</strong>，首次启动可直接进入应用。</li>
         <li>需要你<strong>自带模型 API Key</strong>（在应用内设置里填）。LLM 支持 Claude / GPT / Gemini / Grok / OpenRouter / DeepSeek / Kimi / Qwen / GLM / MiniMax / 自定义 OpenAI-compatible；本版不提供任何托管的模型额度或公共通道。</li>
         <li>你的 Key 仅保存在本机、直接发往对应模型厂商，我们不经手、不上传。</li>
       </ul>
@@ -70,7 +77,7 @@
     <!-- 试用 Manual 链接 -->
     <section data-section="manual">
       <h2>试用手册</h2>
-      <p>第一次用？看 <a id="manual-link" href="./manual.html">试用 Manual</a> —— 从安装、激活、填 Key 到生成第一条成片。</p>
+      <p>第一次用？看 <a id="manual-link" href="./manual.html">试用 Manual</a> —— 从安装、填 Key 到建立 3D 分镜与生成第一条成片。</p>
     </section>
 
     <!-- 反馈入口：App 内 AI 助手 / 邮件 -->
@@ -125,7 +132,7 @@
             status.textContent = (hasMac || hasWin)
               ? "选择对应你的系统下载。首次打开请看下方「安装与首次打开」。"
               : (m.status === "hold"
-                ? "1.0.0 修正版发布暂停，当前没有可下载的正式包。"
+                ? "1.0.1 下载暂不可用，请稍后刷新。"
                 : "暂未发布可下载的安装包，请稍后再来。");
           }
 

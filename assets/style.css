@@ -107,10 +107,14 @@ section h2 {
 .preview-figure {
   margin: 14px 0 18px;
 }
-.preview-figure img {
+.preview-figure img,
+.preview-figure video {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #000;
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
