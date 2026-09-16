@@ -3,146 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pay4Dream · 1.0.1 下载</title>
+  <title>Pay4Dream · 1.0.4 Public 下载</title>
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
   <div class="wrap">
     <header class="hero">
       <h1>Pay4Dream</h1>
-      <p class="tagline">先在 3D 分镜里把镜头走一遍，再进入生成</p>
+      <p class="tagline">把创作工作流、候选选择与镜头编辑放在同一个工作台</p>
     </header>
 
-    <!-- 版本号 / 发布时间，运行时由 release-meta.json 填充 -->
     <p class="meta-line" data-section="version">
-      版本 <strong id="meta-version">…</strong> · <span id="meta-date">2026-07-27</span>
+      版本 <strong id="meta-version">1.0.4</strong> · <span id="meta-date">待发布</span>
     </p>
 
-    <!-- 下载：macOS / Windows 两个按钮。URL 为占位/空时显示禁用「尚未发布」态 -->
     <section data-section="download">
-      <h2>下载 Pay4Dream 1.0.1</h2>
-      <p>Public 版支持 macOS 与 Windows，无需邀请码或激活码。安装后配置你自己的模型 API Key，即可开始建立项目、管理素材和设计镜头。</p>
+      <h2>下载 Pay4Dream 1.0.4 Public</h2>
+      <p>Public 版支持 macOS 与 Windows。安装后配置你自己的模型 API Key，即可开始建立项目、管理素材和设计镜头。</p>
       <div class="downloads">
         <a id="dl-macos" class="dl-btn" href="#" aria-disabled="true">
           <span class="platform">macOS</span>
-          <span class="hint">Apple Silicon / Intel · .dmg</span>
+          <span class="hint">Apple Silicon · .dmg · 待发布</span>
         </a>
         <a id="dl-windows" class="dl-btn" href="#" aria-disabled="true">
           <span class="platform">Windows</span>
-          <span class="hint">Windows 10/11 64 位 · 安装向导 .exe</span>
+          <span class="hint">Windows 10/11 64 位 · 安装向导 .exe · 待发布</span>
         </a>
       </div>
-      <p class="callout" id="dl-status">选择对应你的系统下载。</p>
+      <p class="callout" id="dl-status">正在读取发布状态…</p>
+      <p class="meta-line">校验：macOS <code id="hash-macos">待生成最终校验值</code> · Windows <code id="hash-windows">待生成最终校验值</code></p>
     </section>
 
-    <section data-section="highlights">
-      <h2>1.0.1 重点更新：3D 分镜</h2>
+    <section data-section="release-notes">
+      <h2>1.0.4 重点更新</h2>
       <figure class="preview-figure">
-        <video controls preload="metadata" poster="./assets/sceneboard-preview.png">
-          <source src="./assets/p4d-mobile-capability-demo-zh-en-v3.mp4" type="video/mp4" />
-        </video>
-        <figcaption>Android 镜头捕捉器技术预览：中英字幕演示陀螺仪、双摇杆运镜、3D 场景编辑和关键帧动画。画面来自模拟器，真实设备硬件验收仍在进行。</figcaption>
-      </figure>
-      <figure class="preview-figure">
-        <img src="./assets/sceneboard-preview.png" alt="Pay4Dream 3D 分镜：角色、道具、摄影机、运动轨迹与时间线位于同一工作区" />
-        <figcaption>在统一 SceneBoard 中检查构图、机位、动作和运镜，再决定参考与生成路线。</figcaption>
+        <img src="./assets/p4d-1.0.4-public-scene-board.png" alt="Pay4Dream 1.0.4 Public 版的 3D 分镜工作区" />
+        <figcaption>Public 版 3D 分镜：程序化人偶与场景对象可见，场景对象可选并可通过旋转控件编辑。</figcaption>
       </figure>
       <ul class="tight">
-        <li><strong>统一调度</strong>：角色、场景道具、姿态、摄影机、焦距、关键帧和时间线预演集中在一个 SceneBoard。</li>
-        <li><strong>旋转修复</strong>：单个模型与组合道具都能通过旋转控件更新可见姿态；组合道具围绕共同中心整体变换，并支持撤销、重做和保存恢复。</li>
-        <li><strong>一致的鼠标操作</strong>：左键拖动平移视角，<code>Shift + 左键</code> 环绕观察，滚轮缩放；右键只打开场景菜单。</li>
-        <li><strong>先设计，再生成</strong>：镜头运动轨迹和参考策略可以在消耗生成额度前检查，再进入视频提交链路。</li>
-        <li><strong>多来源参考</strong>：本地图片 / 视频、Cadrage 与移动端采集素材可以进入统一参考链路。</li>
-        <li><strong>移动端协作</strong>：Android 镜头捕捉器技术预览可采集陀螺仪 / 摇杆运镜、编辑 3D 场景与关键帧，并通过 <code>.p4dcapture</code> 返回桌面；iOS 上线时间未定。</li>
+        <li><strong>创作工作台</strong>：视频、图片、3D 分镜、剪辑、任务和设置使用统一的视觉层级与控件样式。</li>
+        <li><strong>候选与恢复</strong>：优化候选预览与采用、失败恢复和跨镜头状态刷新。</li>
+        <li><strong>编辑体验</strong>：改善窄窗口下的顶栏、剪辑片段和 3D 视图显示；本地视频缩略图以静帧呈现。</li>
+        <li><strong>Public 3D</strong>：角色使用程序化人偶，保留可见、选择和基础场景编辑体验；不包含该类第三方模型资源，也不会请求其下载。</li>
       </ul>
     </section>
 
-    <!-- 安全提示：未签名 / Gatekeeper / SmartScreen -->
     <section data-section="safety">
       <h2>安装与安全提示</h2>
-      <p>macOS 包为 ad-hoc 签名且未经过 Apple notarization；首次打开请右键 App 选择「打开」。Windows 安装包未签名，SmartScreen 出现时请核对文件名与发布页后再选择「仍要运行」。Windows 已通过原生构建与安装包检查，但尚未完成真实 Windows 机器上的安装启动验收。</p>
-      <p class="callout warn">只从本页或 GitHub Release 下载 Public 包。Internal 与 Beta 包不对外分发。</p>
+      <p>只从本页或 GitHub Release 下载 Public 包。Internal 与 Beta 包不对外分发。请在下载后核对本页显示的 SHA-256。</p>
     </section>
 
-    <!-- 试用限制：无邀请码 + 自带 key -->
     <section data-section="trial-limits">
       <h2>试用须知</h2>
       <ul class="tight">
-        <li>Public 1.0.1 <strong>无需邀请码或激活码</strong>，首次启动可直接进入应用。</li>
-        <li>需要你<strong>自带模型 API Key</strong>（在应用内设置里填）。LLM 支持 Claude / GPT / Gemini / Grok / OpenRouter / DeepSeek / Kimi / Qwen / GLM / MiniMax / 自定义 OpenAI-compatible；本版不提供任何托管的模型额度或公共通道。</li>
-        <li>你的 Key 仅保存在本机、直接发往对应模型厂商，我们不经手、不上传。</li>
+        <li>Public 版无需邀请码或激活码；首次启动后可配置自己的模型 API Key。</li>
+        <li>Public 版不内嵌模型凭证，也不提供托管的模型额度或内部通道。</li>
+        <li>云端模型可能产生由对应服务商收取的费用。</li>
       </ul>
     </section>
 
-    <!-- 试用 Manual 链接 -->
     <section data-section="manual">
       <h2>试用手册</h2>
-      <p>第一次用？看 <a id="manual-link" href="./manual.html">试用 Manual</a> —— 从安装、填 Key 到建立 3D 分镜与生成第一条成片。</p>
+      <p>第一次用？看 <a id="manual-link" href="./manual.html">试用 Manual</a>。</p>
     </section>
 
-    <!-- 反馈入口：App 内 AI 助手 / 邮件 -->
     <section data-section="feedback">
       <h2>反馈与报告问题</h2>
-      <p>遇到 bug 或有建议，优先在 App 内打开 <strong>AI 助手</strong> 描述问题；
-        如果无法打开 App，请邮件联系
-        <a href="mailto:pay4dream.app@gmail.com">pay4dream.app@gmail.com</a>。</p>
-      <p class="callout">反馈时请附上系统版本、App 版本、复现步骤和截图，方便定位。</p>
+      <p>遇到问题请附上系统版本、App 版本、复现步骤和截图，发送至 <a href="mailto:pay4dream.app@gmail.com">pay4dream.app@gmail.com</a>。</p>
     </section>
 
-    <footer>
-      <span class="pill">独立公开页面 · 与任何内部分发渠道无关</span>
-    </footer>
+    <footer><span class="pill">独立公开页面 · 仅提供 Public 版本</span></footer>
   </div>
 
   <script>
-    // 运行时从 release-meta.json 填充版本 / 时间 / 下载链接。
-    // 占位值（REPLACE_WITH_*）或空 → 对应下载按钮保持禁用「尚未发布」态。
     (function () {
-      function isPlaceholder(v) {
-        return !v || typeof v !== "string" || v.indexOf("REPLACE_WITH_") === 0;
-      }
-      function setBtn(id, url, label) {
+      function pending(v) { return !v || typeof v !== "string" || v.indexOf("REPLACE_WITH_") === 0; }
+      function enable(id, url, label, published) {
         var el = document.getElementById(id);
         if (!el) return false;
-        if (isPlaceholder(url)) {
-          el.setAttribute("aria-disabled", "true");
-          el.setAttribute("href", "#");
-          var hint = el.querySelector(".hint");
-          if (hint) hint.textContent = label + " · 尚未发布";
+        if (!published || pending(url)) {
+          el.setAttribute("aria-disabled", "true"); el.setAttribute("href", "#");
+          el.querySelector(".hint").textContent = label + " · 待发布";
           return false;
         }
-        el.removeAttribute("aria-disabled");
-        el.setAttribute("href", url);
-        return true;
+        el.removeAttribute("aria-disabled"); el.setAttribute("href", url); return true;
       }
-      fetch("./release-meta.json", { cache: "no-store" })
-        .then(function (r) { return r.json(); })
-        .then(function (m) {
-          var vEl = document.getElementById("meta-version");
-          var dEl = document.getElementById("meta-date");
-          if (vEl) vEl.textContent = isPlaceholder(m.version) ? "尚未发布" : m.version;
-          if (dEl) dEl.textContent = isPlaceholder(m.released_at) ? "—" : m.released_at;
-
-          var dl = m.downloads || {};
-          var hasMac = setBtn("dl-macos", dl.macos, "Apple Silicon / Intel · .dmg");
-          var hasWin = setBtn("dl-windows", dl.windows, "Windows 10/11 64 位 · 安装向导 .exe");
-
-          var status = document.getElementById("dl-status");
-          if (status) {
-            status.textContent = (hasMac || hasWin)
-              ? "选择对应你的系统下载。首次打开请看下方「安装与首次打开」。"
-              : (m.status === "hold"
-                ? "1.0.1 下载暂不可用，请稍后刷新。"
-                : "暂未发布可下载的安装包，请稍后再来。");
-          }
-
-          var manual = document.getElementById("manual-link");
-          if (manual && !isPlaceholder(m.manual_url)) manual.setAttribute("href", m.manual_url);
-        })
-        .catch(function () {
-          var status = document.getElementById("dl-status");
-          if (status) status.textContent = "版本信息读取失败，请刷新页面重试。";
-        });
+      fetch("./release-meta.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (m) {
+        var published = m.status === "released";
+        document.getElementById("meta-version").textContent = pending(m.version) ? "尚未发布" : m.version;
+        document.getElementById("meta-date").textContent = published && !pending(m.released_at) ? m.released_at : "待发布";
+        var d = m.downloads || {}, c = m.checksums || {};
+        var mac = enable("dl-macos", d.macos, "Apple Silicon · .dmg", published);
+        var win = enable("dl-windows", d.windows, "Windows 10/11 64 位 · 安装向导 .exe", published);
+        document.getElementById("hash-macos").textContent = pending(c.macos_sha256) ? "待生成最终校验值" : c.macos_sha256;
+        document.getElementById("hash-windows").textContent = pending(c.windows_sha256) ? "待生成最终校验值" : c.windows_sha256;
+        document.getElementById("dl-status").textContent = mac && win ? "请选择对应系统下载，并在下载后核对 SHA-256。" : "1.0.4 Public 包正在完成最终校验，暂不提供下载。";
+      }).catch(function () { document.getElementById("dl-status").textContent = "发布信息读取失败，请稍后刷新。"; });
     })();
   </script>
 </body>
