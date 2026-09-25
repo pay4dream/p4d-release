@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pay4Dream · 1.0.4 Public 下载</title>
+  <title>Pay4Dream · 1.1.0 Public</title>
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
@@ -14,37 +14,37 @@
     </header>
 
     <p class="meta-line" data-section="version">
-      版本 <strong id="meta-version">1.0.4</strong> · <span id="meta-date">待发布</span>
+      版本 <strong id="meta-version">1.1.0</strong> · <span id="meta-date">2026-09-25</span>
     </p>
 
     <section data-section="download">
-      <h2>下载 Pay4Dream 1.0.4 Public</h2>
-      <p>Public 版支持 macOS 与 Windows。安装后配置你自己的模型 API Key，即可开始建立项目、管理素材和设计镜头。</p>
+      <h2>下载 Pay4Dream 1.1.0 Public</h2>
+      <p>macOS Apple Silicon 版已发布。Windows x64 1.1.0 正在构建，当前可使用 <a href="https://github.com/pay4dream/p4d-release/releases/tag/v1.0.4">Windows 1.0.4 历史版本</a>。</p>
       <div class="downloads">
-        <a id="dl-macos" class="dl-btn" href="#" aria-disabled="true">
+        <a id="dl-macos" class="dl-btn" href="https://github.com/pay4dream/p4d-release/releases/download/v1.1.0/Pay4Dream-1.1.0-external-mac.dmg">
           <span class="platform">macOS</span>
-          <span class="hint">Apple Silicon · .dmg · 待发布</span>
+          <span class="hint">Apple Silicon · .dmg · 34,073,979 字节</span>
         </a>
         <a id="dl-windows" class="dl-btn" href="#" aria-disabled="true">
           <span class="platform">Windows</span>
-          <span class="hint">Windows 10/11 64 位 · 安装向导 .exe · 待发布</span>
+          <span class="hint">Windows 10/11 64 位 · 安装向导 .exe · 构建中</span>
         </a>
       </div>
       <p class="callout" id="dl-status">正在读取发布状态…</p>
-      <p class="meta-line">校验：macOS <code id="hash-macos">待生成最终校验值</code> · Windows <code id="hash-windows">待生成最终校验值</code></p>
+      <p class="meta-line">SHA256：macOS <code id="hash-macos">69823ad9565815f3476c7342d5a195772daabbdd3edd958cb164b33effb0ec5e</code> · Windows <code id="hash-windows">构建中</code></p>
     </section>
 
     <section data-section="release-notes">
-      <h2>1.0.4 重点更新</h2>
+      <h2>1.1.0 更新</h2>
       <figure class="preview-figure">
         <img src="./assets/p4d-1.0.4-public-scene-board.png" alt="Pay4Dream 1.0.4 Public 版的 3D 分镜工作区" />
-        <figcaption>Public 版 3D 分镜：程序化人偶与场景对象可见，场景对象可选并可通过旋转控件编辑。</figcaption>
+        <figcaption>Public 1.0.4 历史界面：角色占位与场景对象可见，场景对象可选并可通过旋转控件编辑。</figcaption>
       </figure>
       <ul class="tight">
-        <li><strong>创作工作台</strong>：视频、图片、3D 分镜、剪辑、任务和设置使用统一的视觉层级与控件样式。</li>
-        <li><strong>候选与恢复</strong>：优化候选预览与采用、失败恢复和跨镜头状态刷新。</li>
-        <li><strong>编辑体验</strong>：改善窄窗口下的顶栏、剪辑片段和 3D 视图显示；本地视频缩略图以静帧呈现。</li>
-        <li><strong>Public 3D</strong>：角色使用程序化人偶，保留可见、选择和基础场景编辑体验；不包含该类第三方模型资源，也不会请求其下载。</li>
+        <li><strong>LibTV 镜头生成</strong>：用自己的账户检查模型、主动启用，确认内容与费用后生成；结果先进入候选，显式采用后再剪辑和导出。</li>
+        <li><strong>候选与恢复</strong>：改进同一项目连续生成的默认节点命名；已有结果可继续查询、下载或导入，不重复提交付费生成。</li>
+        <li><strong>编辑体验</strong>：保留已有配音和片段时长，改进剪辑恢复、撤销重做与报错展示。</li>
+        <li><strong>Public 3D</strong>：使用程序化胶囊体作为角色占位，支持基础场景编辑；不提供骨骼姿态或关节手柄编辑。</li>
       </ul>
     </section>
 
@@ -83,21 +83,21 @@
         if (!el) return false;
         if (!published || pending(url)) {
           el.setAttribute("aria-disabled", "true"); el.setAttribute("href", "#");
-          el.querySelector(".hint").textContent = label + " · 待发布";
+          el.querySelector(".hint").textContent = label + " · 构建中";
           return false;
         }
         el.removeAttribute("aria-disabled"); el.setAttribute("href", url); return true;
       }
       fetch("./release-meta.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (m) {
-        var published = m.status === "released";
+        var published = m.status === "released" || m.status === "partial";
         document.getElementById("meta-version").textContent = pending(m.version) ? "尚未发布" : m.version;
         document.getElementById("meta-date").textContent = published && !pending(m.released_at) ? m.released_at : "待发布";
         var d = m.downloads || {}, c = m.checksums || {};
         var mac = enable("dl-macos", d.macos, "Apple Silicon · .dmg", published);
         var win = enable("dl-windows", d.windows, "Windows 10/11 64 位 · 安装向导 .exe", published);
         document.getElementById("hash-macos").textContent = pending(c.macos_sha256) ? "待生成最终校验值" : c.macos_sha256;
-        document.getElementById("hash-windows").textContent = pending(c.windows_sha256) ? "待生成最终校验值" : c.windows_sha256;
-        document.getElementById("dl-status").textContent = mac && win ? "请选择对应系统下载，并在下载后核对 SHA-256。" : "1.0.4 Public 包正在完成最终校验，暂不提供下载。";
+        document.getElementById("hash-windows").textContent = pending(c.windows_sha256) ? "构建中" : c.windows_sha256;
+        document.getElementById("dl-status").textContent = mac && win ? "请选择对应系统下载，并在下载后核对 SHA-256。" : mac ? "macOS 1.1.0 已发布；Windows 1.1.0 构建中。" : "安装包尚未发布，暂不提供下载。";
       }).catch(function () { document.getElementById("dl-status").textContent = "发布信息读取失败，请稍后刷新。"; });
     })();
   </script>
