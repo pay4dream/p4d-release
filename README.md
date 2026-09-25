@@ -4,7 +4,7 @@ Pay4Dream Public 发布页面与应用内更新元数据。该仓库不包含模
 
 ## 1.1.0 发布状态
 
-macOS Apple Silicon Public 1.1.0 已发布并通过完整下载校验。Windows x64 1.1.0 正在构建，尚未提供新包；Windows 用户当前可继续使用 1.0.4。当前 `release-meta.json` 状态为 `partial`，`latest.json` 暂时保持 1.0.4。
+macOS Apple Silicon 与 Windows x64 Public 1.1.0 已在同一个 Release 提供，两份安装包均通过完整下载大小和 SHA256 校验。`release-meta.json` 与 `latest.json` 已同步为 1.1.0。
 
 下载入口：[Public 发布页](https://pay4dream.github.io/p4d-release/) · [1.1.0 Release](https://github.com/pay4dream/p4d-release/releases/tag/v1.1.0) · [使用手册](https://pay4dream.github.io/p4d-release/manual.html)。
 
