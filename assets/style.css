@@ -133,6 +133,8 @@ code, .mono {
   padding: 1px 6px;
   border-radius: 5px;
   font-size: 13px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 footer {

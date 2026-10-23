@@ -3,61 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pay4Dream · 1.1.0 Public</title>
+  <title>Pay4Dream · 1.1.2 Public</title>
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
   <div class="wrap">
     <header class="hero">
       <h1>Pay4Dream</h1>
-      <p class="tagline">把创作工作流、候选选择与镜头编辑放在同一个工作台</p>
+      <p class="tagline">从参考到静态 KV，再到可确认费用的动态预览</p>
     </header>
 
     <p class="meta-line" data-section="version">
-      版本 <strong id="meta-version">1.1.0</strong> · <span id="meta-date">2026-09-25</span>
+      版本 <strong id="meta-version">1.1.2</strong> · <span id="meta-date">2026-10-23</span>
     </p>
 
     <section data-section="download">
-      <h2>下载 Pay4Dream 1.1.0 Public</h2>
-      <p>macOS Apple Silicon 与 Windows x64 版均已发布。请核对下载文件与 SHA256；<a href="https://github.com/pay4dream/p4d-release/releases/tag/v1.0.4">1.0.4 历史版本</a>仍保留。</p>
+      <h2>下载 Pay4Dream 1.1.2 Public</h2>
+      <p>macOS Apple Silicon 与 Windows x64 安装包已放入同一个公开 Release。下载后请核对文件大小与 SHA-256。</p>
       <div class="downloads">
-        <a id="dl-macos" class="dl-btn" href="https://github.com/pay4dream/p4d-release/releases/download/v1.1.0/Pay4Dream-1.1.0-external-mac.dmg">
+        <a id="dl-macos" class="dl-btn" href="https://github.com/pay4dream/p4d-release/releases/download/v1.1.2/Pay4Dream-1.1.2-external-mac.dmg">
           <span class="platform">macOS</span>
-          <span class="hint">Apple Silicon · .dmg · 34,073,979 字节</span>
+          <span class="hint">Apple Silicon · .dmg · <span id="size-macos">大小待回填</span></span>
         </a>
-        <a id="dl-windows" class="dl-btn" href="https://github.com/pay4dream/p4d-release/releases/download/v1.1.0/Pay4Dream-1.1.0-external-win-x64-setup.exe">
+        <a id="dl-windows" class="dl-btn" href="https://github.com/pay4dream/p4d-release/releases/download/v1.1.2/Pay4Dream-1.1.2-external-win-x64-setup.exe">
           <span class="platform">Windows</span>
-          <span class="hint">Windows 10/11 64 位 · 安装向导 .exe · 20,221,286 字节</span>
+          <span class="hint">Windows 10/11 64 位 · 安装向导 .exe · <span id="size-windows">大小待回填</span></span>
         </a>
       </div>
-      <p class="callout" id="dl-status">正在读取发布状态…</p>
-      <p class="meta-line">SHA256：macOS <code id="hash-macos">69823ad9565815f3476c7342d5a195772daabbdd3edd958cb164b33effb0ec5e</code> · Windows <code id="hash-windows">6680110eecec689fb45ded95f335fb05edaf571c3f72dab7032496370858a37c</code></p>
+      <p class="callout" id="dl-status">下载已开放；最终文件大小与 SHA-256 待回填。</p>
+      <p class="meta-line">SHA256：macOS <code id="hash-macos">最终校验值待回填</code> · Windows <code id="hash-windows">最终校验值待回填</code></p>
     </section>
 
     <section data-section="release-notes">
-      <h2>1.1.0 更新</h2>
-      <figure class="preview-figure">
-        <img src="./assets/p4d-1.0.4-public-scene-board.png" alt="Pay4Dream 1.0.4 Public 版的 3D 分镜工作区" />
-        <figcaption>Public 1.0.4 历史界面：角色占位与场景对象可见，场景对象可选并可通过旋转控件编辑。</figcaption>
-      </figure>
+      <h2>1.1.2 更新</h2>
       <ul class="tight">
-        <li><strong>LibTV 镜头生成</strong>：用自己的账户检查模型、主动启用，确认内容与费用后生成；结果先进入候选，显式采用后再剪辑和导出。</li>
-        <li><strong>候选与恢复</strong>：改进同一项目连续生成的默认节点命名；已有结果可继续查询、下载或导入，不重复提交付费生成。</li>
-        <li><strong>编辑体验</strong>：保留已有配音和片段时长，改进剪辑恢复、撤销重做与报错展示。</li>
-        <li><strong>Public 3D</strong>：使用程序化胶囊体作为角色占位，支持基础场景编辑；不提供骨骼姿态或关节手柄编辑。</li>
+        <li><strong>KV 创作成为第五工作区</strong>：与图片生成、3D 分镜、视频生成、剪辑并列。主体、场景、构图与风格参考集中在同一份 KV 草稿里，换一个参考或要求就能继续做变体。</li>
+        <li><strong>参考选择生成静态 KV</strong>：按参考槽位组织素材，生成完整静态主视觉。生成前确认标题、模型、尺寸、引用数量与费用；确认只授权当前一次提交。</li>
+        <li><strong>3D 构图往返</strong>：从 KV 草稿进入 3D 构图，调整角色、场景与机位，再把捕获结果写回同一草稿。已选的角色、场景与风格会保留，不会用推测机位替代真实构图。</li>
+        <li><strong>一键动态 KV</strong>：选中静态 KV 后直接作为图生视频首帧，不必另建镜头或切换工作区。可选用人物微动、环境氛围或缓慢运镜预设；确认费用后才生成，结果回到同一张 KV 卡，原静态图保留。</li>
+        <li><strong>显式操作、失败不自动重投</strong>：静态与动态 KV 每次生成都需要一次明确确认。失败或受理结果未知时不会自动重复提交，避免在未核对任务记录前产生重复费用。</li>
+        <li><strong>随包提供本机会话工具</strong>：安装包内含 <code>p4d-cli</code>、其别名 <code>p4d</code> 与桌面 Agent API 使用说明，方便 Agent 和脚本通过正在运行的桌面应用完成本机会话。</li>
       </ul>
+    </section>
+
+    <section data-section="agent-api">
+      <h2>本机会话与 Agent API</h2>
+      <p><code>p4d-cli</code> 与 <code>p4d</code> 是同一个随包客户端，通过仅限本机、需要认证的回环会话连接正在运行的 Pay4Dream。它们复用桌面应用已有的数据、权限、供应商与渲染能力，不另开数据库，也不直接调用模型服务。</p>
+      <ul class="tight">
+        <li><strong>用途</strong>：Agent 或脚本可以发现本机会话、查看命令目录、读取当前项目与任务，并请求执行允许的操作；KV 草稿、结果展示、费用确认和可视化仍回到 Pay4Dream 桌面界面。</li>
+        <li><strong>版本边界</strong>：客户端与应用必须版本完全一致。未发现运行中的会话或版本不匹配时，操作会在提交前停止。</li>
+        <li><strong>收费与敏感操作</strong>：付费、破坏性、敏感操作既要有命令行中的显式许可，也仍受应用内既有确认约束。KV 的生成请求只能打开费用确认，不能由命令行直接扣费；反馈提交也只在桌面界面由你确认。</li>
+        <li><strong>超时与未知结果</strong>：请求可能已送达时不会自动重试。先用请求编号查询状态，或到任务历史与资产库核对，再决定是否显式重开。</li>
+        <li><strong>安全边界</strong>：会话令牌不会打印在命令输出或错误信息中；不要把模型服务密钥直接写进命令行、共享脚本或反馈内容。需要传递敏感输入时，使用本机文件的受限权限或标准输入。</li>
+      </ul>
+      <p>详细命令与恢复流程见随包 <code>P4D_CLI.md</code>，也可以在桌面应用运行时执行 <code>p4d-cli guide</code>。</p>
     </section>
 
     <section data-section="safety">
       <h2>安装与安全提示</h2>
-      <p>只从本页或 GitHub Release 下载 Public 包。Internal 与 Beta 包不对外分发。请在下载后核对本页显示的 SHA-256。</p>
+      <p>请只从本页或公开 GitHub Release 下载。macOS 包使用 ad-hoc 签名、尚未公证；Windows 包未签名，本页不将下载或安装成功表述为实机验收。请在下载后核对本页显示的 SHA-256。</p>
     </section>
 
     <section data-section="trial-limits">
       <h2>试用须知</h2>
       <ul class="tight">
-        <li>Public 版无需邀请码或激活码；首次启动后可配置自己的模型 API Key。</li>
-        <li>Public 版不内嵌模型凭证，也不提供托管的模型额度或内部通道。</li>
+        <li>Public 版首次启动后可以直接建立项目，或先配置自己的模型服务。</li>
+        <li>Public 版不内嵌模型凭证，也不提供托管的模型额度。</li>
         <li>云端模型可能产生由对应服务商收取的费用。</li>
       </ul>
     </section>
@@ -77,28 +88,54 @@
 
   <script>
     (function () {
-      function pending(v) { return !v || typeof v !== "string" || v.indexOf("REPLACE_WITH_") === 0; }
-      function enable(id, url, label, published) {
+      function pending(value) {
+        if (typeof value === "number") return !Number.isFinite(value) || value <= 0;
+        if (typeof value !== "string" || !value.trim()) return true;
+        return /^REPLACE_WITH_/.test(value) || /^__[A-Z0-9_]+__$/.test(value);
+      }
+      function formatSize(value) {
+        if (pending(value)) return "大小待回填";
+        var bytes = Number(String(value).replace(/,/g, ""));
+        if (!Number.isFinite(bytes) || bytes < 0) return "大小待回填";
+        return bytes.toLocaleString("en-US") + " 字节";
+      }
+      function formatHash(value) {
+        return pending(value) ? "最终校验值待回填" : value;
+      }
+      function enable(id, url, fallbackLabel, published) {
         var el = document.getElementById(id);
         if (!el) return false;
         if (!published || pending(url)) {
-          el.setAttribute("aria-disabled", "true"); el.setAttribute("href", "#");
-          el.querySelector(".hint").textContent = label + " · 构建中";
+          el.setAttribute("aria-disabled", "true");
+          el.setAttribute("href", "#");
+          el.querySelector(".hint").firstChild.textContent = fallbackLabel + " · ";
           return false;
         }
-        el.removeAttribute("aria-disabled"); el.setAttribute("href", url); return true;
+        el.removeAttribute("aria-disabled");
+        el.setAttribute("href", url);
+        return true;
       }
-      fetch("./release-meta.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (m) {
-        var published = m.status === "released" || m.status === "partial";
-        document.getElementById("meta-version").textContent = pending(m.version) ? "尚未发布" : m.version;
-        document.getElementById("meta-date").textContent = published && !pending(m.released_at) ? m.released_at : "待发布";
-        var d = m.downloads || {}, c = m.checksums || {};
-        var mac = enable("dl-macos", d.macos, "Apple Silicon · .dmg", published);
-        var win = enable("dl-windows", d.windows, "Windows 10/11 64 位 · 安装向导 .exe", published);
-        document.getElementById("hash-macos").textContent = pending(c.macos_sha256) ? "待生成最终校验值" : c.macos_sha256;
-        document.getElementById("hash-windows").textContent = pending(c.windows_sha256) ? "构建中" : c.windows_sha256;
-        document.getElementById("dl-status").textContent = mac && win ? "请选择对应系统下载，并在下载后核对 SHA-256。" : mac ? "macOS 1.1.0 已发布；Windows 1.1.0 构建中。" : "安装包尚未发布，暂不提供下载。";
-      }).catch(function () { document.getElementById("dl-status").textContent = "发布信息读取失败，请稍后刷新。"; });
+      fetch("./release-meta.json", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (meta) {
+        var published = meta.status === "released" || meta.status === "partial";
+        var downloads = meta.downloads || {};
+        var checksums = meta.checksums || {};
+        var sizes = meta.sizes || {};
+        document.getElementById("meta-version").textContent = pending(meta.version) ? "1.1.2" : meta.version;
+        document.getElementById("meta-date").textContent = published && !pending(meta.released_at) ? meta.released_at : "待发布";
+        var mac = enable("dl-macos", downloads.macos, "Apple Silicon · .dmg", published);
+        var win = enable("dl-windows", downloads.windows, "Windows 10/11 64 位 · 安装向导 .exe", published);
+        document.getElementById("size-macos").textContent = formatSize(sizes.macos_bytes);
+        document.getElementById("size-windows").textContent = formatSize(sizes.windows_bytes);
+        document.getElementById("hash-macos").textContent = formatHash(checksums.macos_sha256);
+        document.getElementById("hash-windows").textContent = formatHash(checksums.windows_sha256);
+        var detailsReady = !pending(sizes.macos_bytes) && !pending(sizes.windows_bytes) &&
+          !pending(checksums.macos_sha256) && !pending(checksums.windows_sha256);
+        document.getElementById("dl-status").textContent = mac && win
+          ? (detailsReady ? "请选择对应系统下载，并在下载后核对文件大小与 SHA-256。" : "下载已开放；最终文件大小与 SHA-256 待回填。")
+          : "安装包尚未发布，暂不提供下载。";
+      }).catch(function () {
+        document.getElementById("dl-status").textContent = "发布信息读取失败；请稍后刷新，或直接打开公开 GitHub Release。";
+      });
     })();
   </script>
 </body>

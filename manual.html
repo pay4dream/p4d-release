@@ -10,103 +10,104 @@
   <div class="wrap">
     <header class="hero">
       <h1>试用 Manual</h1>
-      <p class="tagline">从安装到生成第一条成片</p>
+      <p class="tagline">从安装、参考到静态与动态 KV</p>
     </header>
 
     <p class="meta-line"><a href="./index.html">← 回下载页</a></p>
 
-    <figure class="preview-figure">
-      <video controls preload="metadata" poster="./assets/sceneboard-preview.png">
-        <source src="./assets/p4d-mobile-capability-demo-zh-en-v3.mp4" type="video/mp4" />
-      </video>
-      <figcaption>Android 镜头捕捉器技术预览：中英字幕演示陀螺仪、双摇杆运镜、3D 场景编辑和关键帧动画。画面来自模拟器，真实设备硬件验收仍在进行。</figcaption>
-    </figure>
-
     <section>
       <h2>发布状态</h2>
-      <p class="callout">macOS Apple Silicon 与 Windows x64 Public 1.1.0 均已发布。请从下载页按系统选择并核对 SHA256；Windows 未签名，未进行实机验收。历史图片与视频保留原版本标注。</p>
+      <p class="callout">Pay4Dream Public 1.1.2 的 macOS Apple Silicon 与 Windows x64 安装包已通过公开 Release 提供。macOS 使用 ad-hoc 签名、尚未公证；Windows 安装包未签名，本版不声称已完成 Windows 实机验收。</p>
     </section>
 
     <section>
       <h2>1. 安装</h2>
       <ul class="tight">
-        <li><strong>macOS</strong>：核对下载页的文件名与 SHA256，打开 <code>.dmg</code>，把 Pay4Dream Public 拖进「应用程序」。
-          应用使用 ad-hoc 签名，尚未公证。首次打开按系统提示<strong>右键图标 → 打开</strong>；仍被拦截时查看「系统设置 → 隐私与安全性」。不要全局关闭 Gatekeeper。</li>
-        <li><strong>Windows</strong>：双击 <code>.exe</code> 走安装向导。SmartScreen 弹窗点
-          「更多信息」→「仍要运行」。安装包未签名；本版尚未完成真实 Windows 机器上的安装启动验收。</li>
+        <li><strong>macOS</strong>：核对下载页的文件名与 SHA256，打开 <code>.dmg</code>，把 Pay4Dream Public 拖进「应用程序」。应用尚未公证；首次打开可右键图标选择「打开」，仍被拦截时查看「系统设置 → 隐私与安全性」。不要全局关闭 Gatekeeper。</li>
+        <li><strong>Windows</strong>：双击 <code>.exe</code> 走安装向导。SmartScreen 出现提示时可选择「更多信息」→「仍要运行」。安装包未签名；本版不声称已完成真实 Windows 机器上的安装启动验收。</li>
       </ul>
     </section>
 
     <section>
       <h2>2. 首次启动</h2>
-      <p>Public 版无需邀请码或激活码。打开应用后直接建立项目，或先进入设置配置模型服务。</p>
+      <p>Public 版打开应用后可以直接建立项目，或先进入设置配置模型服务。</p>
     </section>
 
     <section>
-      <h2>3. 填入你自己的 API Key</h2>
-      <p>本版需要你自带模型 Key。进入<strong>设置 → Providers</strong> 填入对应供应商 Key；
-        再到<strong>设置 → AI 引擎</strong>为不同任务选择模型。</p>
+      <h2>3. 配置自己的模型服务</h2>
+      <p>本版需要自带模型服务。进入<strong>设置 → 供应商</strong>填写自己的服务信息，再到<strong>设置 → AI 引擎</strong>为不同任务选择模型。</p>
       <ul class="tight">
-        <li>LLM 可选 Claude / GPT / Gemini / Grok / OpenRouter / DeepSeek / Kimi / Qwen / GLM / MiniMax / 自定义 OpenAI-compatible。</li>
-        <li>Key 只保存在本机，请求<strong>直接发往对应模型厂商</strong>，不经第三方中转。</li>
-        <li>没有 Key？到对应模型厂商官网申请后再回来填。</li>
+        <li>服务信息只保存在本机，请求发往你选择的模型服务商。</li>
+        <li>没有可用模型时，请先到对应服务商取得访问权限并完成配置。</li>
+        <li>云端模型可能产生由对应服务商收取的费用；每次付费生成前都应核对应用内提示。</li>
       </ul>
     </section>
 
     <section>
-      <h2>4. 生成第一条成片</h2>
-      <ul class="tight">
-        <li>新建项目；已有文案、KM、链接或文件时，先用「对话生成」整理项目、序列和镜头。</li>
+      <h2>4. 从项目到成片</h2>
+      <ol class="tight">
+        <li>新建项目；已有文案、链接或文件时，可先用「对话生成」整理项目、序列和镜头。</li>
         <li>有现成图片、视频或音频时先导入资产库，再绑定到目标镜头。</li>
         <li>常用逐镜头操作留在「生成」模式；需要节点、上下游关系和执行计划时切到「流程」。</li>
         <li>需要安排角色占位、场景、摄影机或参考时，可打开当前镜头的「3D 分镜」编辑场景。Public 版使用程序化胶囊体作为角色占位，支持基础场景编辑；不提供骨骼姿态或关节手柄编辑。</li>
-        <li>在 3D 分镜中可选择场景对象，使用移动、旋转、缩放控件编辑；操作支持撤销、重做和保存恢复。</li>
-        <li>提交前检查 prompt、参考素材和参数；只有确认提交后才会运行生成。</li>
-        <li>生成结果可在项目里预览、选片、重试并进入自动剪辑。</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>4.1 用自己的 LibTV 账户生成镜头</h2>
-      <p>以下步骤已在 macOS Public 1.1.0 完成必要操作验证；Windows 实机操作未验收。</p>
-      <ol class="tight">
-        <li>打开「设置 → 集成 → LibTV 外部生成」。自行安装官方 CLI、登录自己的账户，点「检查账号与模型」，确认可用后主动启用；检查和启用不会自动生成。</li>
-        <li>选中目标镜头，点镜头底部「LibTV」，选择画布项目并检查 Seedance 2.5、提示词、时长与可用参数。</li>
-        <li>点「生成命令预览」核对信息，再阅读费用提示并点「确认生成」。提交后不要重复发起同一个付费任务。</li>
-        <li>结果进入候选后先预览；在「提交记录」点「选为成片」，确认「已选定」，再进入剪辑与导出。预览本身不会替换成片。</li>
-        <li>下载或导入中断时，从原镜头的「LibTV 恢复」继续已有任务；恢复不会重新提交生成，关闭集成也不删除既有恢复记录。</li>
+        <li>提交前检查提示词、参考素材和参数；只有确认提交后才会运行生成。结果可在项目里预览、选片、重试并进入自动剪辑。</li>
       </ol>
-      <p>账户、会员与凭据不随包提供。历史带水印素材不会自动替换；新下载以账户权益和平台返回结果为准。1080p 导出不等于原始生成就是 1080p。Dreamina 生成、Higgsfield 与新的移动端交付不在本次范围内。</p>
     </section>
 
     <section>
-      <h2>5. 参考素材与外部生成</h2>
+      <h2>5. KV 创作：第五工作区</h2>
+      <p>「KV 创作」与图片生成、3D 分镜、视频生成、剪辑并列，适合把角色、主体、场景、构图和风格组合成完整主视觉参考。它共享当前项目、素材库、任务与模型，不另建一套资产或渲染系统。</p>
+      <ol class="tight">
+        <li>进入「KV 创作」，在角色/主体、场景、构图、风格四个区域选择已有素材，或补一句清楚的画面需求。人数、景别和横竖版使用简单选项；缺图或超过当前模型参考上限时，界面会明确提示。</li>
+        <li>点「生成静态 KV」后先核对标题、模型、实际尺寸、引用数量与费用。确认只授权当前这一次提交，确认后再生成。</li>
+        <li>生成完成后可并排比较上一稿与当前稿；重用上一稿的参考，换角色、场景或要求即可继续做变体。</li>
+      </ol>
+
+      <h3>5.1 3D 构图往返</h3>
+      <p>在构图中选择进入 3D 后，可调整角色、场景与机位。3D 工作区捕获的结果会写回同一份 KV 草稿；返回后继续使用真实当前机位，已选的角色、场景和风格不会被清空。打开 3D 构图和捕获本身不会提交付费生成。</p>
+
+      <h3>5.2 一键动态 KV</h3>
+      <ol class="tight">
+        <li>选中一张已生成的静态 KV，点「一键动态KV」。静态图会直接作为图生视频首帧，并自动关联当前 KV 草稿；不需要另建序列或镜头。</li>
+        <li>选择「人物微动」「环境氛围」或「缓慢运镜」，也可以补充一句想要的运动。默认建议保持主体、身份、服装、光线和构图，运动幅度克制。</li>
+        <li>查看模型实际支持的范围与费用，再做一次明确确认。确认后只提交一次；静态原图不会被覆盖。</li>
+        <li>动态结果会回到同一张 KV 卡，可播放、换一个动态方向，或送入后续剪辑。失败或结果未知时不要立即重复提交，先到任务历史和资产库核对。</li>
+      </ol>
+      <p>动态 KV 是创意参考：重点是人物轻动作、环境氛围与克制运镜，不承诺无缝循环、逐像素不变、口型、对白、配音、音乐或自动成片。</p>
+    </section>
+
+    <section>
+      <h2>6. 本机会话工具与桌面 Agent API</h2>
+      <p>安装包内含 <code>p4d-cli</code>、别名 <code>p4d</code>、版本清单与 <code>P4D_CLI.md</code>。macOS 可在 <code>Pay4Dream Public.app/Contents/Resources/</code> 找到客户端；Windows 可在应用安装目录找到 <code>p4d-cli.exe</code> 与 <code>p4d.exe</code>。安装不会自动把它加入 PATH。</p>
+      <p>这套工具供 Agent 和脚本通过本机会话操作正在运行的桌面应用。它可以发现会话、读取状态与命令目录、查询项目，并请求应用执行允许的结构或界面操作；结果展示、KV 草稿、费用确认和可视化仍由 Pay4Dream 处理，不是第二个引擎或数据库。</p>
+      <p>也可以直接阅读 <a href="https://github.com/pay4dream/p4d-release/releases/download/v1.1.2/Pay4Dream-1.1.2-P4D_CLI.md">1.1.2 命令行完整说明</a>。</p>
+      <ol class="tight">
+        <li>先启动同一版本的 Pay4Dream 桌面应用，再用客户端所在路径执行 <code>p4d-cli guide</code>，查看当前版本自带的使用说明。</li>
+        <li>执行 <code>p4d-cli sessions</code> 和 <code>p4d-cli status</code>，确认存在可用本机会话且应用版本完全一致。没有会话或版本不一致时，客户端会在提交前停止。</li>
+        <li>用 <code>p4d-cli commands</code> 查看允许的命令、参数和风险类型；用 <code>p4d-cli ui open</code> 请求打开已有界面，不创建另一套可视化。</li>
+        <li>若请求超时或连接中断，先用 <code>p4d-cli request-status &lt;请求编号&gt;</code> 查询，或到任务历史与资产库核对。不要自动重投可能已经执行的付费、破坏性或敏感请求。</li>
+      </ol>
+      <p><strong>收费确认与安全边界：</strong>命令行中的付费、破坏性、敏感许可只是附加护栏，不会绕过应用内确认。KV 的生成请求只能打开应用内费用确认，不能由命令行直接扣费；反馈提交也只由用户在桌面界面确认。会话只接受本机认证连接，令牌不会打印在输出或错误信息中；不要把模型服务密钥写入命令行、共享脚本或反馈内容。需要传递敏感输入时，使用权限受限的本机文件或标准输入。</p>
+    </section>
+
+    <section>
+      <h2>7. 常见问题</h2>
       <ul class="tight">
-        <li>SceneBoard 可导入本地图片 / 视频、Cadrage 和移动端采集素材；导入、编辑和预览不会自动生成。</li>
-        <li>Android 镜头捕捉器技术预览可采集镜头运动并回传 <code>.p4dcapture</code>；尚未完成真实设备硬件验收。iOS 上线时间未定。</li>
-        <li>iOS 文件通过系统 Files / File Provider 已同步到本机的目录读取，P4D 不提供自有 iCloud 账号绑定。</li>
-        <li>LibTV 是可选第三方集成，需要自行安装官方 CLI 并显式登录；镜头生成需「确认生成」，既有外部生成入口需「确认上传并生成」，确认后才会运行相应任务。</li>
+        <li><strong>提示服务不可用或额度不足</strong>：到对应模型服务商后台确认访问状态和余额。</li>
+        <li><strong>打不开或被系统拦</strong>：见第 1 步的右键打开与 SmartScreen 放行说明。</li>
+        <li><strong>生成很慢或失败</strong>：先检查网络能否访问对应模型服务商；已有任务可从任务历史恢复，不要自动重复提交付费请求。</li>
+        <li><strong>动态 KV 结果未知</strong>：保留请求编号，先查询任务状态和资产库，确认没有结果后再显式重开一次生成。</li>
+        <li><strong>命令行找不到会话</strong>：确认桌面应用正在运行、客户端与应用版本一致，并查看 <code>p4d-cli sessions</code> 的结果。</li>
       </ul>
     </section>
 
     <section>
-      <h2>6. 常见问题</h2>
-      <ul class="tight">
-        <li><strong>提示 Key 无效 / 额度不足</strong>：到模型厂商后台确认 Key 状态和余额。</li>
-        <li><strong>打不开 / 被系统拦</strong>：见第 1 步的右键打开 / SmartScreen 放行。</li>
-        <li><strong>生成很慢或失败</strong>：检查网络能否访问对应模型厂商，稍后重试。</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>7. 反馈</h2>
-      <p>问题和建议优先在 App 内打开 <strong>AI 助手</strong> 描述；如果 App 无法打开，
-        请邮件联系 <a href="mailto:pay4dream.app@gmail.com">pay4dream.app@gmail.com</a>。
-        反馈时请附系统版本、App 版本、复现步骤和截图。</p>
+      <h2>8. 反馈</h2>
+      <p>问题和建议优先在 App 内打开 <strong>AI 助手</strong> 描述；如果 App 无法打开，请邮件联系 <a href="mailto:pay4dream.app@gmail.com">pay4dream.app@gmail.com</a>。反馈时请附系统版本、App 版本、复现步骤和截图；不要附会话令牌或模型服务密钥。</p>
     </section>
 
     <footer>
-      <span class="pill">面向外部试用用户 · 无需邀请码 · 自带 API Key</span>
+      <span class="pill">面向外部试用用户 · 自带模型服务</span>
     </footer>
   </div>
 </body>
